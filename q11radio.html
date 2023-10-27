@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input
+        type="radio"
+        onclick="fun1(this.value)"
+        name="r1"
+        id="h1"
+        value="1"
+      />Fruit
+      <input
+        type="radio"
+        onclick="fun1(this.value)"
+        name="r1"
+        id="h2"
+        value="2"
+      />vegetables
+
+      <select id="s1">
+        <option value="">Pls select option</option>
+        <option value=""></option>
+        <option value=""></option>
+      </select>
+    </form>
+
+    <script>
+      function fun1(v) {
+        with (document.getElementById("s1")) {
+          if (v == 1) {
+            options[0].text = "Banana";
+            options[1].text = "Apple";
+            options[2].text = "Orange";
+          }
+
+          if (v == 2) {
+            options[0].text = "Carrot";
+            options[1].text = "Broccoli";
+            options[2].text = "Tomato";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

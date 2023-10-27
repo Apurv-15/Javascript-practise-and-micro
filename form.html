@@ -1,0 +1,32 @@
+<html>
+  <body>
+    <form name="login">
+      Enter Username<input type="text" name="userid" /><br />
+      Enter Password<input type="password" name="pswrd" />
+      <input type="button" onclick="display()" value="Display" />
+    </form>
+    <script language="javascript">
+      function display() {
+        document.write(
+          "User ID " + login.userid.value + "Password : " + login.pswrd.value
+        );
+      }
+    </script>
+    <form>
+      <select multiple id="sub">
+        <optgroup label="Sy subjects">
+          <option>dsu</option>
+          <option>oop</option>
+        </optgroup>
+      </select>
+      <legend>Dropdown</legend>
+      <label for="branch">Branch</label>
+      <input list="branch1" />
+      <datalist id="branch1">
+        <option value="co"></option>
+        <option value="to"></option>
+        <option value="zo"></option>
+      </datalist>
+    </form>
+  </body>
+</html>

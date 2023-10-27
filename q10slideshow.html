@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" id="img1" alt="image 1" />
+    <button onclick="forward(1)">Next</button>
+    <button onclick="forward(-1)">prev</button>
+    <script>
+      const images = [
+        "https://img.freepik.com/premium-photo/abstract-rainbow-colorful-bright-feather-closeup-up-macro-view-background-plumage-texture-with-dew-drops_753134-644.jpg",
+        "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
+        "https://img.freepik.com/free-photo/abstract-autumn-beauty-multi-colored-leaf-vein-pattern-generated-by-ai_188544-9871.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1698192000&semt=ais",
+      ];
+      var index = 0;
+      function forward(v) {
+        index += v;
+        if (index > images.length - 1) {
+          index = 0;
+        }
+        if (index < 0) {
+          index = images.length - 1;
+        }
+
+        document.getElementById("img1").src = images[index];
+      }
+    </script>
+  </body>
+</html>

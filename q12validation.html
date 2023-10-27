@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      Name<input type="text" id="n1" />
+      <br />
+      <br />
+      email<input type="email" id="n2" />
+      <button onclick="return fun()">Chick mi</button>
+    </form>
+
+    <script>
+      function fun() {
+        let name1 = document.getElementById("n1").value;
+        let email1 = document.getElementById("n2").value;
+
+        var namevalidate = /^[a-zA-Z\s]+/;
+        var emailvalidate = /^[a-zA-Z0-9.]+@[a-zA-Z.]+[a-zA-Z]{2,5}$/;
+        var vali = true;
+
+        if (namevalidate.test(name1)) {
+          document.getElementById("n1").innerHTML = "valid";
+        } else {
+          document.getElementById("n1").innerHTML = "invalid";
+          vali = false;
+        }
+
+        if (emailvalidate.test(email1)) {
+          vali = true;
+        } else {
+          alert("Email not valid");
+          vali = false;
+        }
+
+        return vali;
+      }
+    </script>
+  </body>
+</html>

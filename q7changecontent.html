@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Window Content</title>
+  </head>
+  <body>
+    <button onclick="changeWindowContent()">Change Content</button>
+    <p id="hi1">Hello i am going to change</p>
+    <form>
+      <label for="h1" id="hi2">i am changing</label>
+    </form>
+    <script>
+      function changeWindowContent() {
+        // Access the current window's document
+        document.getElementById("hi1").innerHTML = "hi sir ji";
+        document.getElementById("hi2").innerHTML = "hi sir ji";
+      }
+    </script>
+  </body>
+</html>
