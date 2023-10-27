@@ -46,13 +46,6 @@ video {
   mix-blend-mode: overlay;
 }
 
-/* .container
-{
-    width: 100%;
-    min-height: 100vh;
-    padding: 1rem;
-} */
-
 .box {
   position: relative;
   width: 450px;
@@ -177,7 +170,7 @@ h2 {
 ul li {
   list-style: none;
   font-size: 1rem;
-  padding: 15px 8px 12px 50px;
+  padding: 25px 8px 12px 50px;
   user-select: none;
   cursor: pointer;
   position: relative;
@@ -192,4 +185,18 @@ ul li::before {
   background-image: url(./images/unchecked.png);
   background-size: cover;
   background-position: center;
+  top: 20px;
+  left: 12px;
+}
+
+ul li.checked
+{
+  color:#555;
+  text-decoration: line-through;
+
+}
+
+ul li.checked::before
+{
+  background-image: url(./images/checked.png);
 }
