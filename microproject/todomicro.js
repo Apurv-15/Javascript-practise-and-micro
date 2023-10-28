@@ -10,6 +10,9 @@ function fun() {
     li.innerHTML = inputText.value;
 
     list.appendChild(li);
-    inputText.value = ""; //for clearing input text after adding
+    let span = document.createElement("span");
+    span.innerHTML = "\u00d7";
+    li.appendChild(span);
   }
+  inputText.value = ""; //for clearing input text
 }
