@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script>
+      MyBanners = new Array(
+        "https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg",
+        "https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/1156684/pexels-photo-1156684.jpeg?cs=srgb&dl=pexels-arun-thomas-1156684.jpg&fm=jpg"
+      );
+      let count = 0;
+      MyBannerLinks = new Array(
+        "https://www.google.com",
+        "https://www.gmail.com",
+        "https://www.facebook.com"
+      );
+
+      function DisplayLinks() {
+        document.location.href = MyBannerLinks[count];
+      }
+      function Display() {
+        if (document.images) {
+          count++;
+          if (count === MyBanners.length) {
+            count = 0;
+          }
+          document.BannerChange.src = MyBanners[count];
+          setTimeout(Display, 2000); // Change image every 2 seconds
+        }
+      }
+
+      // Call the Display function to start the slideshow when the page loads
+      window.onload = Display;
+    </script>
+  </head>
+  <body>
+    <a href="javascript:DisplayLinks()">
+      <img
+        src="https://wallpapers.com/images/featured/hd-a5u9zq0a0ymy2dug.jpg"
+        name="BannerChange"
+      />
+    </a>
+  </body>
+</html>
